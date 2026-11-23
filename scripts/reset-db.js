@@ -1,0 +1,1 @@
+const fs=require("fs"),path=require("path");const p=path.join(__dirname,"..","data","order-to-audit.db");for(const x of [p,p+"-wal",p+"-shm"])if(fs.existsSync(x))fs.unlinkSync(x);console.log("Database removed. Run npm start to recreate seeded demo data.");
